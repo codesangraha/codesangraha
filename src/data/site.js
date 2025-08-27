@@ -11,13 +11,48 @@ export const NAV = [
 
 // --- replace your SERVICES with this richer list ---
 export const SERVICES = [
-  { id: "web",     title: "Website Development", desc: "Sleek, lightning-fast sites designed to rank and impress.", icon: "💻" },
-  { id: "webapp",  title: "Web App Development", desc: "Smart, secure web apps that power your business.", icon: "🧩" },
-  { id: "mobile",  title: "Mobile Apps",         desc: "One app, every device — iOS & Android covered.", icon: "📱" },
-  { id: "custom",  title: "Custom Software",     desc: "Tailored solutions that fit your workflow perfectly. APIs, workflows, data pipelines.", icon: "⚙️" },
-  { id: "commerce",title: "E-commerce",          desc: "Modern storefronts that sell and scale with ease.", icon: "🛒" },
-  { id: "devops",  title: "Cloud & DevOps",      desc: "Reliable cloud setups for smooth, continuous delivery.", icon: "☁️" },
-  { id: "design",  title: "UI/UX Design",        desc: "Accessible, clean product design.", icon: "🎨" },
+  {
+    id: "web",
+    title: "Website Development",
+    desc: "Sleek, lightning-fast sites designed to rank and impress.",
+    icon: "💻",
+  },
+  {
+    id: "webapp",
+    title: "Web App Development",
+    desc: "Smart, secure web apps that power your business.",
+    icon: "🧩",
+  },
+  {
+    id: "mobile",
+    title: "Mobile Apps",
+    desc: "One app, every device — iOS & Android covered.",
+    icon: "📱",
+  },
+  {
+    id: "custom",
+    title: "Custom Software",
+    desc: "Tailored solutions that fit your workflow perfectly. APIs, workflows, data pipelines.",
+    icon: "⚙️",
+  },
+  {
+    id: "commerce",
+    title: "E-commerce",
+    desc: "Modern storefronts that sell and scale with ease.",
+    icon: "🛒",
+  },
+  {
+    id: "devops",
+    title: "Cloud & DevOps",
+    desc: "Reliable cloud setups for smooth, continuous delivery.",
+    icon: "☁️",
+  },
+  {
+    id: "design",
+    title: "UI/UX Design",
+    desc: "Accessible, clean product design.",
+    icon: "🎨",
+  },
 ];
 
 // --- add this new detailed content (keep it under your exports) ---
@@ -109,7 +144,6 @@ export const SERVICES_DETAILS = {
 //   { q: "Who owns the code & designs?", a: "You do — everything is delivered to your org with docs." },
 // ];
 
-
 // --- replace this whole PROJECTS array ---
 export const PROJECTS = [
   {
@@ -157,12 +191,29 @@ export const PROJECTS = [
   // add more later using /src/assets/cs6.jpg, cs7.jpg, ...
 ];
 
-
 export const TESTIMONIALS = [
-  { name: "Harendra B. Rai", role: "Director, Baraha Montessori Academy", quote: "Reliable team, smooth communication and Easy Payment Plan." },
-  { name: "Kabin Magar", role: "Proprietor, Atmaranjan Outlet & Cafe", quote: "Great Team, On-Time Sevice, Proper Features Feedback Implementation." },
-  { name: "Nabin Rai", role: "Founder, Kirat Agriculture & Livestock Pvt. Ltd", quote: "Great young talents, Custom featured software never been this easy." },
-  { name: "Saroj Subedi", role: "Founder, Quiz Master", quote: "Clear estimates, Easy Communication and meets Deadline." },
+  {
+    name: "Harendra B. Rai",
+    role: "Director, Baraha Montessori Academy",
+    quote: "Reliable team, smooth communication and Easy Payment Plan.",
+  },
+  {
+    name: "Kabin Magar",
+    role: "Proprietor, Atmaranjan Outlet & Cafe",
+    quote:
+      "Great Team, On-Time Sevice, Proper Features Feedback Implementation.",
+  },
+  {
+    name: "Nabin Rai",
+    role: "Founder, Kirat Agriculture & Livestock Pvt. Ltd",
+    quote:
+      "Great young talents, Custom featured software never been this easy.",
+  },
+  {
+    name: "Saroj Subedi",
+    role: "Founder, Quiz Master",
+    quote: "Clear estimates, Easy Communication and meets Deadline.",
+  },
 ];
 
 export const COMPANY = {
@@ -174,7 +225,6 @@ export const COMPANY = {
   socials: {
     facebook: "https://www.facebook.com/profile.php?id=61569846395617",
     instagram: "https://www.instagram.com/codesangraha/",
-    
   },
 };
 
@@ -184,24 +234,24 @@ export const TEAM = [
     name: "Muhammed Dilshad",
     role: "Co-founder • CEO",
     photo: "/assets/cs123.jpg",
-    blurb: "Driving societal growth by turning technology into solutions that matter.",
+    blurb:
+      "Driving societal growth by turning technology into solutions that matter.",
     links: {
       github: "https://github.com/",
-      linkedin: "https://www.linkedin.com/",
-       instagram: "https://www.instagram.com/ahmedaesthetic/",
+      linkedin: "https://www.linkedin.com/in/muhammed-dilshad-b02894215/",
+      instagram: "https://www.instagram.com/ahmedaesthetic/",
     },
   },
   {
     name: "Aryan Shakya",
     role: "Co-founder • COO • Tech Lead ",
     photo: "/assets/cs1234.jpg",
-    blurb: "Guiding our tech and teams to turn big ideas into societal progress.",
+    blurb:
+      "Guiding our tech and teams to turn big ideas into societal progress.",
     links: {
-      github: "https://github.com/",
-      linkedin: "https://www.linkedin.com/",
-       instagram: "https://www.instagram.com/aryan.shakyaa_/",
+      github: "https://github.com/aryanshakya760",
+      linkedin: "https://www.linkedin.com/in/aryan-shakya-4a4a29214/",
+      instagram: "https://www.instagram.com/aryan.shakyaa_/",
     },
   },
-  
-  
 ];

@@ -1,341 +1,664 @@
 @import "tailwindcss";
 
-
 /* =========================
    BRAND + THEME (DARK)
    ========================= */
-:root{
-  --green-dark:#059212; /* deep */
-  --green:#06D001;      /* primary */
-  --lime:#9BEC00;       /* accent */
-  --ink:#E8F2EE;        /* main text on dark */
-  --muted:#A6B0BD;      /* secondary text */
-  --line:rgba(255,255,255,.12);
-  --bg:#0b0f0d;         /* page background */
-  --panel:#0f1317;      /* surfaces/cards */
-  --panel-2:#121920;    /* alt surface */
-  --glow:0 18px 48px rgba(6,208,1,.22);
-  --glow-soft:0 10px 30px rgba(6,208,1,.14);
-  --shadow:0 10px 30px rgba(0,0,0,.35);
+:root {
+  --green-dark: #059212; /* deep */
+  --green: #06d001; /* primary */
+  --lime: #9bec00; /* accent */
+  --ink: #e8f2ee; /* main text on dark */
+  --muted: #a6b0bd; /* secondary text */
+  --line: rgba(255, 255, 255, 0.12);
+  --bg: #0b0f0d; /* page background */
+  --panel: #0f1317; /* surfaces/cards */
+  --panel-2: #121920; /* alt surface */
+  --glow: 0 18px 48px rgba(6, 208, 1, 0.22);
+  --glow-soft: 0 10px 30px rgba(6, 208, 1, 0.14);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* ===== Base reset ===== */
-html,body{height:100%}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--ink);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
+html,
+body {
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
 }
 
 /* Links */
-a{color:var(--lime);text-decoration:none}
-a:hover{color:#b6ff36}
+a {
+  color: var(--lime);
+  text-decoration: none;
+}
+a:hover {
+  color: #b6ff36;
+}
 
 /* =========================
    OVERRIDES for Tailwind utilities
    (affects your existing markup)
    ========================= */
 /* Surfaces used all over your pages */
-.bg-white{ background-color: var(--panel) !important; }
-.border-slate-200{ --tw-border-opacity:1; border-color: rgba(255,255,255,.14) !important; }
-.border-emerald-200\/60{ border-color: rgba(16,185,129,.35) !important; }
-.text-slate-900{ color: var(--ink) !important; }
-.text-slate-700{ color: #C7D0D8 !important; }
-.text-slate-600{ color: var(--muted) !important; }
-.text-slate-500{ color: #96A1AD !important; }
-.bg-emerald-50{ background-color: rgba(6,208,1,.10) !important; }
-.text-emerald-700{ color:#8AF06A !important; }
-.bg-emerald-600{ background-color:#2dd66c !important; }
-.bg-emerald-500{ background-color:#39e07a !important; }
-.text-emerald-900{ color:#0f331e !important; } /* used on buttons */
+.bg-white {
+  background-color: var(--panel) !important;
+}
+.border-slate-200 {
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+.border-emerald-200\/60 {
+  border-color: rgba(16, 185, 129, 0.35) !important;
+}
+.text-slate-900 {
+  color: var(--ink) !important;
+}
+.text-slate-700 {
+  color: #c7d0d8 !important;
+}
+.text-slate-600 {
+  color: var(--muted) !important;
+}
+.text-slate-500 {
+  color: #96a1ad !important;
+}
+.bg-emerald-50 {
+  background-color: rgba(6, 208, 1, 0.1) !important;
+}
+.text-emerald-700 {
+  color: #8af06a !important;
+}
+.bg-emerald-600 {
+  background-color: #2dd66c !important;
+}
+.bg-emerald-500 {
+  background-color: #39e07a !important;
+}
+.text-emerald-900 {
+  color: #0f331e !important;
+} /* used on buttons */
 
 /* Cards & shadows */
-.shadow-sm, .shadow-lg{
+.shadow-sm,
+.shadow-lg {
   box-shadow: var(--shadow) !important;
 }
-.border-slate-200{ border-color: rgba(255,255,255,.14) !important; }
+.border-slate-200 {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
 
 /* Section padding you already use */
-.section{ padding:96px 0; }
+.section {
+  padding: 96px 0;
+}
 
 /* =========================
    GLOBAL COMPONENT SKIN
    ========================= */
 /* Navbar glass look */
-.nav-glass{
-  background: linear-gradient(180deg, rgba(14,18,22,.8), rgba(14,18,22,.6));
+.nav-glass {
+  background: linear-gradient(
+    180deg,
+    rgba(14, 18, 22, 0.8),
+    rgba(14, 18, 22, 0.6)
+  );
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
-.nav-link{ position:relative; padding:4px 6px; font-weight:500; color:#D7DFE6; transition:color .2s; }
-.nav-link:hover, .nav-link.active{ color:#d4ffd0; }
-.nav-link::after{
-  content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px;
-  transform:scaleX(0); transform-origin:left;
-  background-image:linear-gradient(90deg,var(--green),var(--lime));
-  box-shadow:var(--glow-soft);
-  transition:transform .22s;
+.nav-link {
+  position: relative;
+  padding: 4px 6px;
+  font-weight: 500;
+  color: #d7dfe6;
+  transition: color 0.2s;
 }
-.nav-link:hover::after, .nav-link.active::after{ transform:scaleX(1); }
+.nav-link:hover,
+.nav-link.active {
+  color: #d4ffd0;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-image: linear-gradient(90deg, var(--green), var(--lime));
+  box-shadow: var(--glow-soft);
+  transition: transform 0.22s;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
 
 /* Primary button -> neon */
-.btn-primary{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:10px 16px; border-radius:12px; font-weight:600;
-  color:#0a2416; background-image:linear-gradient(90deg,var(--green),var(--lime));
-  box-shadow: var(--glow); transition: filter .2s, transform .2s, box-shadow .2s;
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #0a2416;
+  background-image: linear-gradient(90deg, var(--green), var(--lime));
+  box-shadow: var(--glow);
+  transition: filter 0.2s, transform 0.2s, box-shadow 0.2s;
 }
-.btn-primary:hover{ filter:brightness(.98); transform:translateY(-1px); box-shadow:0 24px 64px rgba(6,208,1,.28); }
+.btn-primary:hover {
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+  box-shadow: 0 24px 64px rgba(6, 208, 1, 0.28);
+}
 
 /* Drawer panel */
-.drawer{ box-shadow:-8px 0 32px rgba(0,0,0,.45); background: var(--panel-2) !important; }
+.drawer {
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.45);
+  background: var(--panel-2) !important;
+}
 
 /* =========================
    HERO MAKEOVER (no JSX change)
    - styles the FIRST section on any page as a dark, techy hero
    ========================= */
-main section:first-of-type{
-  position:relative; overflow:hidden;
-  background: radial-gradient(800px 400px at 10% -10%, rgba(6,208,1,.12), transparent 60%),
-              radial-gradient(800px 400px at 90% 110%, rgba(155,236,0,.10), transparent 60%),
-              linear-gradient(180deg, #0b0f0d, #0c1216 60%, #0b0f0d);
+main section:first-of-type {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+      800px 400px at 10% -10%,
+      rgba(6, 208, 1, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 400px at 90% 110%,
+      rgba(155, 236, 0, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #0b0f0d, #0c1216 60%, #0b0f0d);
 }
-main section:first-of-type .text-slate-900{ color:#F1FFF5 !important; }
-main section:first-of-type p{ color:#D8E4DE !important; }
-main section:first-of-type span.bg-emerald-100{
-  background: rgba(255,255,255,.08) !important; border-color: rgba(255,255,255,.18) !important; color:#c8ffd2 !important;
+main section:first-of-type .text-slate-900 {
+  color: #f1fff5 !important;
+}
+main section:first-of-type p {
+  color: #d8e4de !important;
+}
+main section:first-of-type span.bg-emerald-100 {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #c8ffd2 !important;
 }
 
 /* Moving grid overlay */
-main section:first-of-type::after{
-  content:""; position:absolute; inset:-200%; opacity:.18; pointer-events:none;
-  background:
-    repeating-linear-gradient(to right, rgba(255,255,255,.18) 0 1px, transparent 1px 80px),
-    repeating-linear-gradient(to bottom, rgba(255,255,255,.18) 0 1px, transparent 1px 80px);
+main section:first-of-type::after {
+  content: "";
+  position: absolute;
+  inset: -200%;
+  opacity: 0.18;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.18) 0 1px,
+      transparent 1px 80px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.18) 0 1px,
+      transparent 1px 80px
+    );
   animation: grid-pan 28s linear infinite;
 }
-@keyframes grid-pan{
-  0%{ transform:translate3d(0,0,0) }
-  100%{ transform:translate3d(80px,80px,0) }
+@keyframes grid-pan {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(80px, 80px, 0);
+  }
 }
 
 /* Stats blocks in hero */
-main section:first-of-type .border-emerald-200\/60{
-  border-color: rgba(102, 255, 153, .35) !important;
+main section:first-of-type .border-emerald-200\/60 {
+  border-color: rgba(102, 255, 153, 0.35) !important;
 }
-main section:first-of-type .bg-white{
-  background: rgba(255,255,255,.06) !important;
+main section:first-of-type .bg-white {
+  background: rgba(255, 255, 255, 0.06) !important;
 }
 
 /* =========================
    CARDS / SECTIONS elsewhere
    ========================= */
-.card{
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius:16px; overflow:hidden;
-  transition: transform .2s, border-color .2s, box-shadow .2s;
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
-.card:hover{
+.card:hover {
   transform: translateY(-2px);
-  border-color: rgba(145,255,120,.5);
-  box-shadow: 0 24px 64px rgba(6,208,1,.2);
+  border-color: rgba(145, 255, 120, 0.5);
+  box-shadow: 0 24px 64px rgba(6, 208, 1, 0.2);
 }
 
 /* Projects grid badges */
-span.bg-emerald-600.text-white{
-  background:#35e278 !important; color:#08260f !important; font-weight:700;
-  box-shadow: 0 6px 22px rgba(53,226,120,.35);
+span.bg-emerald-600.text-white {
+  background: #35e278 !important;
+  color: #08260f !important;
+  font-weight: 700;
+  box-shadow: 0 6px 22px rgba(53, 226, 120, 0.35);
 }
 
 /* Testimonials strip */
-section .w-\[calc\(50\%-12px\)\]{
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04)) !important;
-  border-color: rgba(255,255,255,.12) !important;
+section .w-\[calc\(50\%-12px\)\] {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.04)
+  ) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
   color: var(--ink);
 }
 
 /* About/Portfolio hero diagonals remain, but text colors adapt */
-svg[viewBox="0 0 1440 60"] path[fill="#ffffff"]{
+svg[viewBox="0 0 1440 60"] path[fill="#ffffff"] {
   fill: #0b0f0d; /* blend into dark background */
 }
 
 /* =========================
    Micro animations you already call
    ========================= */
-@keyframes fadeUp{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:none}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.reveal{opacity:0;transform:translateY(16px);animation:fadeUp .7s ease forwards}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.7s ease forwards;
+}
 
 /* Focus styles (a11y) */
-:focus-visible{ outline: 2px solid #7bff66; outline-offset: 2px; }
+:focus-visible {
+  outline: 2px solid #7bff66;
+  outline-offset: 2px;
+}
 
 /* ===== FIX 1: Force dark hero on every page (override inline bg) ===== */
-main section:first-of-type{
-  background:
-    radial-gradient(800px 400px at 10% -10%, rgba(6,208,1,.14), transparent 60%),
-    radial-gradient(800px 400px at 90% 110%, rgba(155,236,0,.12), transparent 60%),
+main section:first-of-type {
+  background: radial-gradient(
+      800px 400px at 10% -10%,
+      rgba(6, 208, 1, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 400px at 90% 110%,
+      rgba(155, 236, 0, 0.12),
+      transparent 60%
+    ),
     linear-gradient(180deg, #0b0f0d, #0c1216 60%, #0b0f0d) !important; /* override inline */
   color: #ecfff4;
 }
 
 /* Stronger text inside the hero */
 main section:first-of-type h1,
-main section:first-of-type h2{ color:#f8fff9 !important }
-main section:first-of-type p{ color:#d9eadf !important }
-main section:first-of-type .text-slate-900{ color:#f8fff9 !important }
+main section:first-of-type h2 {
+  color: #f8fff9 !important;
+}
+main section:first-of-type p {
+  color: #d9eadf !important;
+}
+main section:first-of-type .text-slate-900 {
+  color: #f8fff9 !important;
+}
 main section:first-of-type .text-slate-600,
-main section:first-of-type .text-slate-700{ color:#d9eadf !important }
+main section:first-of-type .text-slate-700 {
+  color: #d9eadf !important;
+}
 
 /* Chip in hero */
-main section:first-of-type .bg-emerald-100{
-  background: rgba(255,255,255,.10) !important;
-  border-color: rgba(255,255,255,.22) !important;
-  color:#cfffcc !important;
+main section:first-of-type .bg-emerald-100 {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: #cfffcc !important;
 }
 
 /* Hero “stats” cards */
-main section:first-of-type .bg-white{ background: rgba(255,255,255,.06) !important }
-main section:first-of-type .border-emerald-200\/60{ border-color: rgba(102,255,153,.35) !important }
+main section:first-of-type .bg-white {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+main section:first-of-type .border-emerald-200\/60 {
+  border-color: rgba(102, 255, 153, 0.35) !important;
+}
 
 /* Diagonal wedge at bottom of hero (so it blends into dark bg) */
-svg[viewBox="0 0 1440 60"] path[fill="#ffffff"]{ fill:#0b0f0d !important }
+svg[viewBox="0 0 1440 60"] path[fill="#ffffff"] {
+  fill: #0b0f0d !important;
+}
 
 /* ===== FIX 2: Make the last section (Home CTA) dark & neon, overriding inline bg ===== */
-main > section:last-of-type{
-  background:
-    radial-gradient(700px 360px at 10% -10%, rgba(6,208,1,.14), transparent 60%),
-    radial-gradient(700px 360px at 90% 110%, rgba(155,236,0,.12), transparent 60%),
+main > section:last-of-type {
+  background: radial-gradient(
+      700px 360px at 10% -10%,
+      rgba(6, 208, 1, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      700px 360px at 90% 110%,
+      rgba(155, 236, 0, 0.12),
+      transparent 60%
+    ),
     linear-gradient(180deg, #0c1216, #0b0f0d) !important;
-  color:#edfef3;
+  color: #edfef3;
 }
-main > section:last-of-type h3{ color:#f6fff9 !important }
-main > section:last-of-type p{ color:#d7eadf !important }
-main > section:last-of-type .mt-6.inline-flex{
-  background-image: linear-gradient(90deg, var(--green), var(--lime)) !important;
-  color:#0b2414 !important;
-  box-shadow: 0 18px 48px rgba(6,208,1,.22);
+main > section:last-of-type h3 {
+  color: #f6fff9 !important;
+}
+main > section:last-of-type p {
+  color: #d7eadf !important;
+}
+main > section:last-of-type .mt-6.inline-flex {
+  background-image: linear-gradient(
+    90deg,
+    var(--green),
+    var(--lime)
+  ) !important;
+  color: #0b2414 !important;
+  box-shadow: 0 18px 48px rgba(6, 208, 1, 0.22);
 }
 
 /* ===== FIX 3: Testimonials card selector (escape % correctly) ===== */
-section .w-\[calc\(50\%-12px\)\]{
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04)) !important;
-  border-color: rgba(255,255,255,.12) !important;
+section .w-\[calc\(50\%-12px\)\] {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.04)
+  ) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
   color: var(--ink);
 }
 
 /* Optional: slightly dim that moving grid under the hero so text pops */
-@keyframes grid-pan{ 0%{ transform:translate3d(0,0,0) } 100%{ transform:translate3d(80px,80px,0) } }
-main section:first-of-type::after{
-  content:""; position:absolute; inset:-200%; opacity:.14; pointer-events:none;
-  background:
-    repeating-linear-gradient(to right, rgba(255,255,255,.18) 0 1px, transparent 1px 80px),
-    repeating-linear-gradient(to bottom, rgba(255,255,255,.18) 0 1px, transparent 1px 80px);
+@keyframes grid-pan {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(80px, 80px, 0);
+  }
+}
+main section:first-of-type::after {
+  content: "";
+  position: absolute;
+  inset: -200%;
+  opacity: 0.14;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.18) 0 1px,
+      transparent 1px 80px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.18) 0 1px,
+      transparent 1px 80px
+    );
   animation: grid-pan 28s linear infinite;
 }
 
 /* allow the Team card to show its hover bubble outside the card */
-.overflow-visible { overflow: visible !important; }
+.overflow-visible {
+  overflow: visible !important;
+}
 
 /* footer link underline + glow on hover */
-footer a:hover { text-decoration: underline; text-underline-offset: 2px; }
-footer .btn-primary { box-shadow: 0 8px 24px rgba(6,208,1,.25); }
-
+footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+footer .btn-primary {
+  box-shadow: 0 8px 24px rgba(6, 208, 1, 0.25);
+}
 
 /* --- Responsive Fix Pack --- */
 
 /* prevent accidental horizontal scroll on mobiles */
-html, body { overflow-x: hidden; }
+html,
+body {
+  overflow-x: hidden;
+}
 
 /* make all media scale nicely by default */
-img, video { max-width: 100%; height: auto; }
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
 
 /* cards & grids flex better */
-.card { display: flex; flex-direction: column; }
+.card {
+  display: flex;
+  flex-direction: column;
+}
 
 /* fluid containers on tiny screens */
 @media (max-width: 380px) {
-  .px-4 { padding-left: 12px !important; padding-right: 12px !important; }
+  .px-4 {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
 }
 
 /* robust line wrapping for long words/URLs */
-.text-wrap-balance { text-wrap: balance; }
-.break-any { word-break: break-word; overflow-wrap: anywhere; }
-
-/* aspect ratio helpers (so we stop using fixed heights) */
-.aspect-16-9 { aspect-ratio: 16 / 9; }
-.aspect-4-3  { aspect-ratio: 4 / 3; }
-
-/* make iframes, maps responsive by default */
-iframe { max-width: 100%; }
-
-/* fix hover popups being cut (you already added .overflow-visible earlier) */
-.overflow-visible { overflow: visible !important; }
-
-/* === Typography Guard (prevents tiny fonts on desktop) === */
-:root{
-  --fs-base:16px;   /* mobile baseline */
-  --lh-base:1.6;
+.text-wrap-balance {
+  text-wrap: balance;
+}
+.break-any {
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
-html{ font-size:var(--fs-base); line-height:var(--lh-base); }
+/* aspect ratio helpers (so we stop using fixed heights) */
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+.aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+/* make iframes, maps responsive by default */
+iframe {
+  max-width: 100%;
+}
+
+/* fix hover popups being cut (you already added .overflow-visible earlier) */
+.overflow-visible {
+  overflow: visible !important;
+}
+
+/* === Typography Guard (prevents tiny fonts on desktop) === */
+:root {
+  --fs-base: 16px; /* mobile baseline */
+  --lh-base: 1.6;
+}
+
+html {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
 
 /* scale up slightly on bigger screens (keeps layout airy) */
-@media (min-width: 1024px){ html{ font-size:17px; } }  /* lg */
-@media (min-width: 1280px){ html{ font-size:18px; } }  /* xl */
+@media (min-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+} /* lg */
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+} /* xl */
 
 /* make sure nothing squeezes text or causes weird wraps */
-* { min-width: 0; }
+* {
+  min-width: 0;
+}
 
 /* =========================
    FIX PACK v2 (global)
    ========================= */
 
 /* 1) Safe reset */
-* { box-sizing: border-box; }
-html, body, #root { margin: 0; padding: 0; width: 100%; max-width: 100%; overflow-x: hidden; }
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 /* 2) Typography guard (prevents tiny desktop fonts) */
-:root{ --fs-base:16px; --lh-base:1.6; }
-html{ font-size:var(--fs-base); line-height:var(--lh-base); }
-@media (min-width:1024px){ html{ font-size:17px; } }
-@media (min-width:1280px){ html{ font-size:18px; } }
+:root {
+  --fs-base: 16px;
+  --lh-base: 1.6;
+}
+html {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+}
 
 /* 3) Media scale + aspect helpers */
-img, video { max-width: 100%; height: auto; display: block; }
-iframe { max-width: 100%; border: 0; }
-.aspect-16-9 { aspect-ratio: 16/9; }
-.aspect-4-3  { aspect-ratio: 4/3; }
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+iframe {
+  max-width: 100%;
+  border: 0;
+}
+.aspect-16-9 {
+  aspect-ratio: 16/9;
+}
+.aspect-4-3 {
+  aspect-ratio: 4/3;
+}
 
 /* 4) Section spacing that adapts better on mobile */
-.section { padding: 80px 0; }
-@media (max-width:640px){ .section { padding: 56px 0; } }
+.section {
+  padding: 80px 0;
+}
+@media (max-width: 640px) {
+  .section {
+    padding: 56px 0;
+  }
+}
 
 /* 5) Fix cards + text wrapping */
-.card { display: flex; flex-direction: column; }
-.break-any { word-break: break-word; overflow-wrap: anywhere; }
-.text-wrap-balance { text-wrap: balance; }
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.break-any {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.text-wrap-balance {
+  text-wrap: balance;
+}
 
 /* 6) Make your common Tailwind container wider on desktop (keeps your markup) */
-@media (min-width:1280px){ .max-w-7xl { max-width: 1400px !important; } }
-@media (min-width:1536px){ .max-w-7xl { max-width: 1500px !important; } }
+@media (min-width: 1280px) {
+  .max-w-7xl {
+    max-width: 1400px !important;
+  }
+}
+@media (min-width: 1536px) {
+  .max-w-7xl {
+    max-width: 1500px !important;
+  }
+}
 
 /* 7) Tighter default page padding on very small phones */
-@media (max-width:380px){
-  .px-4 { padding-left: 12px !important; padding-right: 12px !important; }
+@media (max-width: 380px) {
+  .px-4 {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
 }
 
 /* 8) Ensure off-canvas drawers/modals aren't clipped */
-.overflow-visible { overflow: visible !important; }
+.overflow-visible {
+  overflow: visible !important;
+}
 
 /* 9) Smooth top scroll restore (works with ScrollToTop component) */
-html { scroll-behavior: smooth; }
-
+html {
+  scroll-behavior: smooth;
+}
 
 /* === Footer palette (force white text, green hover) === */
-footer.footer { color:#fff; }
-footer.footer a { color:#fff; transition: color .2s ease; }
-footer.footer a:hover { color: var(--green); }  /* uses your existing --green */
-footer.footer .muted { color: rgba(255,255,255,.7); } /* for subtle lines/text */
-
+footer.footer {
+  color: #fff;
+}
+footer.footer a {
+  color: #fff;
+  transition: color 0.2s ease;
+}
+footer.footer a:hover {
+  color: var(--green);
+} /* uses your existing --green */
+footer.footer .muted {
+  color: rgba(255, 255, 255, 0.7);
+} /* for subtle lines/text */

@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 export default function Pricing() {
   return (
     <>
-      <section className="relative overflow-hidden" style={{ background: "linear-gradient(120deg,#ecfdf5 0%,#e6fff4 40%,#ffffff 100%)" }}>
+      <section
+        className="relative overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(120deg,#ecfdf5 0%,#e6fff4 40%,#ffffff 100%)",
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 pt-24 pb-14">
           <span className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200">
             Pricing
@@ -17,7 +23,12 @@ export default function Pricing() {
             Choose a package or ask for a custom quote for complex products.
           </p>
         </div>
-        <svg className="absolute bottom-0 left-0 right-0 -mb-px" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="absolute bottom-0 left-0 right-0 -mb-px"
+          viewBox="0 0 1440 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path d="M0 0L1440 60H0V0Z" fill="#ffffff" />
         </svg>
       </section>
@@ -25,14 +36,26 @@ export default function Pricing() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-6">
           {PLANS.map((p, i) => (
-            <div key={p.name} className="card p-7 reveal" style={{ animationDelay: `${80 + i * 80}ms` }}>
-              <div className="text-sm text-emerald-700 font-semibold">{p.name}</div>
-              <div className="mt-2 text-3xl font-bold text-slate-900">{p.price}</div>
+            <div
+              key={p.name}
+              className="card p-7 reveal"
+              style={{ animationDelay: `${80 + i * 80}ms` }}
+            >
+              <div className="text-sm text-emerald-700 font-semibold">
+                {p.name}
+              </div>
+              <div className="mt-2 text-3xl font-bold text-slate-900">
+                {p.price}
+              </div>
               <p className="mt-2 text-muted">{p.desc}</p>
               <ul className="mt-5 space-y-2 text-slate-900">
-                {p.includes.map(x => <li key={x}>✓ {x}</li>)}
+                {p.includes.map((x) => (
+                  <li key={x}>✓ {x}</li>
+                ))}
               </ul>
-              <Link to="/contact" className="mt-6 inline-flex btn-primary">Start</Link>
+              <Link to="/contact" className="mt-6 inline-flex btn-primary">
+                Start
+              </Link>
             </div>
           ))}
         </div>
@@ -44,7 +67,9 @@ export default function Pricing() {
           <div className="mt-4 grid gap-3">
             {FAQS.map((f, i) => (
               <details key={i} className="card p-5">
-                <summary className="cursor-pointer font-semibold text-slate-900">{f.q}</summary>
+                <summary className="cursor-pointer font-semibold text-slate-900">
+                  {f.q}
+                </summary>
                 <p className="mt-2 text-muted">{f.a}</p>
               </details>
             ))}
