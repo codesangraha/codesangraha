@@ -17,8 +17,8 @@ export default function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-white text-ink text-base md:text-[17px] lg:text-[18px] flex flex-col">
         <Navbar />
-        <ScrollToTop /> {/* ✅ Scrolls at top */}
         <main className="flex-1">
+          <ScrollToTop /> {/* ✅ Scrolls at top */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
