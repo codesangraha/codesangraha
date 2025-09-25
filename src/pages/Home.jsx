@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { SERVICES, PROJECTS, TESTIMONIALS } from "../data/site.js";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { SERVICES, PROJECTS, TESTIMONIALS } from '../data/site.js';
 
 /* ----------------- HERO ----------------- */
 function Hero() {
@@ -11,7 +11,7 @@ function Hero() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(120deg, #ecfdf5 0%, #e6fff4 40%, #f7fff9 40%, #ffffff 100%)",
+            'linear-gradient(120deg, #ecfdf5 0%, #e6fff4 40%, #f7fff9 40%, #ffffff 100%)',
         }}
       />
 
@@ -21,7 +21,7 @@ function Hero() {
             Nepal • Think Software Think Us
           </span>
           <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-[1.1] text-slate-900">
-            Build faster. <span className="text-emerald-600">Scale</span>{" "}
+            Build faster. <span className="text-emerald-600">Scale</span>{' '}
             smarter.
           </h1>
           <p className="mt-5 text-lg text-slate-600 max-w-2xl">
@@ -33,31 +33,28 @@ function Hero() {
               to="/contact"
               className="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-emerald-900"
               style={{
-                background: "linear-gradient(90deg,#d9fce9,#b7f2d9,#d9fce9)",
-                backgroundSize: "200% 100%",
-              }}
-            >
+                background: 'linear-gradient(90deg,#d9fce9,#b7f2d9,#d9fce9)',
+                backgroundSize: '200% 100%',
+              }}>
               Start a Project
             </Link>
             <Link
               to="/portfolio"
-              className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-emerald-300/60 bg-emerald-50 text-emerald-700"
-            >
+              className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-emerald-300/60 bg-emerald-50 text-emerald-700">
               See Our Work
             </Link>
           </div>
 
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-lg">
             {[
-              ["28+", "Projects"],
-              ["17+", "Clients"],
-              ["2 yrs", "Experience"],
+              ['28+', 'Projects'],
+              ['17+', 'Clients'],
+              ['2 yrs', 'Experience'],
             ].map(([k, v], i) => (
               <div
                 key={i}
                 className="rounded-xl border border-emerald-200/60 bg-white px-4 py-3 text-center reveal"
-                style={{ animationDelay: `${150 + i * 100}ms` }}
-              >
+                style={{ animationDelay: `${150 + i * 100}ms` }}>
                 <div className="text-xl font-semibold text-emerald-700">
                   {k}
                 </div>
@@ -70,8 +67,7 @@ function Hero() {
         <div className="md:col-span-5">
           <div
             className="rounded-2xl border border-emerald-200/60 bg-white p-6 shadow-lg reveal"
-            style={{ animationDelay: "120ms" }}
-          >
+            style={{ animationDelay: '120ms' }}>
             <div className="text-sm font-semibold text-emerald-700">
               Why Code Sangraha?
             </div>
@@ -113,7 +109,7 @@ function AboutPreview() {
           loading="lazy"
           decoding="async"
           className="rounded-2xl border border-slate-200 shadow-md reveal"
-          style={{ animationDelay: "80ms" }}
+          style={{ animationDelay: '80ms' }}
         />
         <div>
           <h2 className="text-3xl font-bold text-slate-900">
@@ -139,8 +135,7 @@ function AboutPreview() {
           </ul>
           <Link
             to="/about"
-            className="mt-6 inline-flex text-emerald-700 font-semibold"
-          >
+            className="mt-6 inline-flex text-emerald-700 font-semibold">
             Learn more →
           </Link>
         </div>
@@ -166,8 +161,7 @@ function ServicesSection() {
             <div
               key={s.title}
               className="bg-white border border-emerald-200/50 rounded-2xl p-7 shadow-sm reveal"
-              style={{ animationDelay: `${80 + i * 80}ms` }}
-            >
+              style={{ animationDelay: `${80 + i * 80}ms` }}>
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 grid place-items-center rounded-lg bg-emerald-50 text-emerald-600 text-xl">
                   {s.icon}
@@ -200,8 +194,7 @@ function FeaturedProjects() {
           </div>
           <Link
             to="/portfolio"
-            className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-emerald-300/60 bg-emerald-50 text-emerald-700"
-          >
+            className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-emerald-300/60 bg-emerald-50 text-emerald-700">
             View All
           </Link>
         </div>
@@ -212,10 +205,9 @@ function FeaturedProjects() {
               key={p.title}
               to="/portfolio"
               className={`rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm reveal ${
-                i === 0 ? "md:col-span-2" : ""
+                i === 0 ? 'md:col-span-2' : ''
               }`}
-              style={{ animationDelay: `${80 + i * 80}ms` }}
-            >
+              style={{ animationDelay: `${80 + i * 80}ms` }}>
               <div className="relative">
                 <img
                   src={p.cover}
@@ -241,7 +233,7 @@ function FeaturedProjects() {
 
 /* ------------- TESTIMONIALS ------------- */
 function Testimonials() {
-  const loop = [...TESTIMONIALS, ...TESTIMONIALS];
+
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4">
@@ -249,17 +241,29 @@ function Testimonials() {
           What Clients Say
         </h2>
 
-        <div className="mt-10 overflow-hidden">
-          <div
-            className="flex gap-6"
-            style={{ width: "200%", animation: "marquee 22s linear infinite" }}
-          >
-            {loop.map((t, i) => (
+        {/* Mobile: Grid Layout */}
+        <div className="mt-10 grid grid-cols-1 gap-6 md:hidden">
+            {TESTIMONIALS.map((t, i) => (
               <div
                 key={i}
-                className="w-[calc(50%-12px)] min-w-[360px] bg-white border border-slate-200 rounded-2xl p-6 shadow-sm"
-              >
+                className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
                 <p className="text-slate-700 leading-relaxed">“{t.quote}”</p>
+                <div className="mt-4 font-medium text-slate-900">{t.name}</div>
+                <div className="text-sm text-slate-500">{t.role}</div>
+              </div>
+            ))}
+        </div>
+
+        {/* Desktop: Marquee Layout */}
+        <div className="mt-10 overflow-hidden hidden md:block">
+          <div
+            className="flex gap-6"
+            style={{ width: '200%', animation: 'marquee 22s linear infinite' }}>
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+              <div
+                key={i}
+                className="w-[calc(50%-12px)] min-w-[360px] bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <p className="text-slate-700 leading-relaxed">"{t.quote}"</p>
                 <div className="mt-4 font-medium text-slate-900">{t.name}</div>
                 <div className="text-sm text-slate-500">{t.role}</div>
               </div>
@@ -277,9 +281,8 @@ function BigCTA() {
     <section
       className="py-20"
       style={{
-        background: "linear-gradient(135deg, #e7fcef 0%, #b7f2d9 100%)",
-      }}
-    >
+        background: 'linear-gradient(135deg, #e7fcef 0%, #b7f2d9 100%)',
+      }}>
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h3 className="text-3xl font-bold text-slate-900">
           Have an idea to build?
@@ -291,10 +294,9 @@ function BigCTA() {
           to="/contact"
           className="mt-6 inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-emerald-900"
           style={{
-            background: "linear-gradient(90deg,#d9fce9,#b7f2d9,#d9fce9)",
-            backgroundSize: "200% 100%",
-          }}
-        >
+            background: 'linear-gradient(90deg,#d9fce9,#b7f2d9,#d9fce9)',
+            backgroundSize: '200% 100%',
+          }}>
           Get a Free Quote
         </Link>
       </div>
